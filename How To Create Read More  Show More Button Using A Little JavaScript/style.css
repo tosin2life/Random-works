@@ -1,0 +1,38 @@
+body {
+  background-color: rgb(12, 9, 9);
+  color: aliceblue;
+  width: 950px;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+  text-align: justify;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.text-more {
+  display: none;
+}
+.btn {
+  font-family: "Nunito", sans-serif;
+  padding: 2rem 3rem;
+  color: aqua;
+  background-color: bisque;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+}
+
+.text.more-text .text-more {
+  display: inline;
+}
+
+.text.more-text .dots {
+  display: none;
+}

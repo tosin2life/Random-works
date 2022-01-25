@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    --color-1:#2F3144;
+    --color-2: #ffffff;
+    --color-3:#FFBC00;
+    --color-4: #DA8F00;
+    --color-5: #E7E8EC;
+    --color-6:#F1F2F7;
+}
+
+section{
+    background-color: #F2F2F2;
+    min-height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: var(--color-2);
+    padding:10rem 3rem;
+}
+
+.container h1{
+font-size: 2.4rem;
+font-weight: 700;
+color:var(--color-1);
+margin-bottom:5rem;
+line-height: 2.5rem;
+}
+
+.main-card{
+display: flex;
+flex-direction: column;   
+}
+
+.image{
+    padding:1.5rem;
+    font-size:2rem;
+    background-color:var(--color-3);
+    border-radius: 50px;
+    border:none;
+    margin-bottom: 1rem;
+    color:white;
+}
+.card-block{
+padding:4rem 2rem;
+transition: .5s ease background-color;
+}
+
+.card-block h2{
+    margin-bottom: 1rem;
+    font-size:2rem;
+    font-weight: 700;
+    /* max-width: 400px; */
+}
+.card-block p{
+    font-size:1.6rem;
+}
+
+.card-block:hover{
+    background-color: var(--color-3);
+    border:none;
+    border-radius: 1rem;
+}
+.card-block:hover .image{
+    color: var(--color-1);
+    background-color: var(--color-2);
+}
+.blog-post{
+    display:flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    border:1px solid var(--color-5);
+    border-radius: 2rem;
+    padding:1rem;
+    cursor: pointer;
+}
+
+.blog-post h2{
+    padding-left: 2rem;
+    margin-top:2rem;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.blog{
+    padding: 2rem 2rem;
+    font-size: 1.8rem;
+    transition: .3s ease-in background-color;
+}
+.blog-post .blog p{
+    color: var(--color-4);
+    font-size:1.5rem;
+}
+.blog:hover{
+    background-color: #F2F2F2;
+    border-radius: 10px;
+}
+
+@media(min-width: 700px){
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+    .main-card{
+        flex:.7;
+        display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
+        gap: 2rem;
+    }
+    .blog-post{
+        flex: 0.3;
+        padding:2rem;
+    }
+    .container h1{
+        font-size: 3.4rem;
+        width:66.6rem;
+        line-height: 42.67px;
+    }
+}

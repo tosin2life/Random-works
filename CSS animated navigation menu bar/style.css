@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 62.5%;
+}
+body {
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  border-radius: 0.5rem;
+  box-shadow: -7px 7px 11px 1px rgba(27, 1, 15, 0.116);
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 150px;
+}
+li a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: black;
+  text-decoration: none;
+}
+
+li:hover a {
+  color: crimson;
+}
+.icon {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: white;
+  right: -80px;
+  background-image: url(https://img.icons8.com/material-outlined/24/000000/menu--v1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 11px 1px rgba(27, 1, 15, 0.116);
+  transition: 0.5s ease transform;
+}
+
+.icon.open {
+  background-image: url(https://img.icons8.com/material-sharp/24/000000/delete-sign.png);
+  transform: rotate(360deg);
+}
+ul {
+  width: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 0.5s ease transform;
+  padding: 1rem;
+}
+nav.show ul {
+  width: 450px;
+  opacity: 1;
+  transform: translate(0);
+  pointer-events: all;
+}
+@media (max-width: 768px) {
+  ul {
+    padding: 1.5rem;
+  }
+  nav.show ul{
+    width: 250px;
+  }
+  li a {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+  .icon{
+      width:45px;
+      height: 45px;
+      right: -60px;
+  }
+  nav{
+      top:30px;
+      right:70px;
+  }
+}

@@ -1,0 +1,117 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body[data-theme="light"] {
+  --color-1: rgb(196, 220, 241);
+  --color-2: white;
+  --color-3: white;
+  --color-4: rgb(80, 82, 110);
+}
+
+body[data-theme="dark"] {
+  --color-1: #1e1f26;
+  --color-2: #292c33;
+  --color-3: rgb(39, 40, 42);
+  --color-4: rgb(186, 186, 202);
+}
+
+body {
+  color: var(--color-4);
+  font-family: "Manrope", sans-serif;
+}
+
+section {
+  background-color: var(--color-1);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--color-2);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  
+}
+p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 25px;
+  
+}
+
+button {
+  background-color: var(--color-4);
+  padding: 10px 30px;
+  border: none;
+  color: var(--color-3);
+  text-transform: uppercase;
+  font-size: 24px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.theme-switcher {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+input {
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
+}
+
+label {
+  display: block;
+  text-indent: -9999px;
+  height: 30px;
+  width: 60px;
+  background-color: aliceblue;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: .5s ease background-color ;
+}
+
+label::after {
+  content: "";
+  background-color: rgb(19, 11, 90);
+  border-radius: 50px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: .5s ease;
+}
+
+input:checked + label {
+  background-color: rgb(25, 26, 37);
+  border: 2px solid whitesmoke;
+}
+
+input:checked + label::after {
+  background-color: aliceblue;
+  left:30px ;
+} 
+
+
